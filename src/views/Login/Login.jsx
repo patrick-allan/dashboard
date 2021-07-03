@@ -1,9 +1,16 @@
-import React from "react";
+import React from 'react';
+import './Login.css';
 
 export default function Login() {
   return (
-    <div>
-      <h1>Login</h1>
+    <div className="login">
+      <div className="outer">
+        <div className="table-container">
+          <div className="table-cell">
+            This content is vertically centered.
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

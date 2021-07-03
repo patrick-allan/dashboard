@@ -5,13 +5,13 @@ const Maps = () => {
   React.useEffect(() => {
     let google = window.google;
     let map = mapRef.current;
-    let lat = "40.748817";
-    let lng = "-73.985428";
+    let lat = "-23.75841";
+    let lng = "-53.29671";
     const myLatlng = new google.maps.LatLng(lat, lng);
     const mapOptions = {
-      zoom: 12,
+      zoom: 15,
       center: myLatlng,
-      scrollwheel: false,
+      scrollwheel: true,
       zoomControl: true,
       styles: [
         {
@@ -77,16 +77,16 @@ const Maps = () => {
       position: myLatlng,
       map: map,
       animation: google.maps.Animation.DROP,
-      title: "Material Dashboard React!",
+      title: "Patrick Allan Exemple App",
     });
 
-    const contentString =
+    /* const contentString =
       '<div class="info-window-content"><h2>Material Dashboard React</h2>' +
       "<p>A premium Admin for React, Material-UI, and React Hooks.</p></div>";
 
     const infowindow = new google.maps.InfoWindow({
       content: contentString,
-    });
+    }); */
 
     google.maps.event.addListener(marker, "click", function () {
       infowindow.open(map, marker);
