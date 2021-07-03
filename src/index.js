@@ -14,6 +14,7 @@ ReactDOM.render(
     <Switch>
       <Route path="/admin" component={Admin} />
       <Route exact path="/login" component={Login} />
+      <Route exact path="/register" component={Login} />
       <Redirect from="/" to="/admin/dashboard" />
     </Switch>
   </BrowserRouter>,

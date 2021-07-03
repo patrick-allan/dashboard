@@ -5,6 +5,7 @@ import LibraryBooks from "@material-ui/icons/LibraryBooks";
 import BubbleChart from "@material-ui/icons/BubbleChart";
 import LocationOn from "@material-ui/icons/LocationOn";
 import Notifications from "@material-ui/icons/Notifications";
+import AppsRoundedIcon from "@material-ui/icons/AppsRounded";
 // core components/views for Admin layout
 import DashboardPage from "views/Dashboard/Dashboard.js";
 import UserProfile from "views/UserProfile/UserProfile.js";
@@ -13,6 +14,7 @@ import Typography from "views/Typography/Typography.js";
 import Icons from "views/Icons/Icons.js";
 import Maps from "views/Maps/Maps.js";
 import NotificationsPage from "views/Notifications/Notifications.js";
+import Calculator from "views/Calculator/Calculator";
 
 const dashboardRoutes = [
   {
@@ -62,6 +64,13 @@ const dashboardRoutes = [
     name: "Notifications",
     icon: Notifications,
     component: NotificationsPage,
+    layout: "/admin",
+  },
+  {
+    path: "/calculator",
+    name: "Calculadora",
+    icon: AppsRoundedIcon,
+    component: Calculator,
     layout: "/admin",
   },
 ];
