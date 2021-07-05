@@ -1,4 +1,5 @@
 import React from "react";
+import { Redirect } from "react-router-dom";
 import classNames from "classnames";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
@@ -21,12 +22,16 @@ import Button from "components/CustomButtons/Button.js";
 
 import styles from "assets/jss/material-dashboard-react/components/headerLinksStyle.js";
 
+import UsersService from "services/user";
+
 const useStyles = makeStyles(styles);
 
 export default function AdminNavbarLinks() {
   const classes = useStyles();
   const [openNotification, setOpenNotification] = React.useState(null);
   const [openProfile, setOpenProfile] = React.useState(null);
+  const [error, setError] = React.useState(false);
+  const [redirectToLogin, setRedirectToLogin] = React.useState(false);
   const handleClickNotification = (event) => {
     if (openNotification && openNotification.contains(event.target)) {
       setOpenNotification(null);
@@ -44,9 +49,23 @@ export default function AdminNavbarLinks() {
       setOpenProfile(event.currentTarget);
     }
   };
+
   const handleCloseProfile = () => {
     setOpenProfile(null);
+  }
+
+  const handleLogout = () => {
+    try{
+      UsersService.logout()
+      setRedirectToLogin(true);
+    }catch (error){
+      setError(true);
+    }
   };
+
+  if (redirectToLogin)
+    return <Redirect to={{pathname: "/login"}}/>
+
   return (
     <div>
       <div className={classes.searchWrapper}>
@@ -207,10 +226,10 @@ export default function AdminNavbarLinks() {
                     </MenuItem>
                     <Divider light />
                     <MenuItem
-                      onClick={handleCloseProfile}
+                      onClick={handleLogout}
                       className={classes.dropdownItem}
                     >
-                      Logout
+                      Sair
                     </MenuItem>
                   </MenuList>
                 </ClickAwayListener>
