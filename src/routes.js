@@ -6,6 +6,7 @@ import BubbleChart from "@material-ui/icons/BubbleChart";
 import LocationOn from "@material-ui/icons/LocationOn";
 import Notifications from "@material-ui/icons/Notifications";
 import AppsRoundedIcon from "@material-ui/icons/AppsRounded";
+import AcUnitIcon from '@material-ui/icons/AcUnit';
 // core components/views for Admin layout
 import DashboardPage from "views/Dashboard/Dashboard.js";
 import UserProfile from "views/UserProfile/UserProfile.js";
@@ -15,6 +16,7 @@ import Icons from "views/Icons/Icons.js";
 import Maps from "views/Maps/Maps.js";
 import NotificationsPage from "views/Notifications/Notifications.js";
 import Calculator from "views/Calculator/Calculator";
+import Weather from "views/Weather/Weather";
 
 const dashboardRoutes = [
   {
@@ -71,6 +73,13 @@ const dashboardRoutes = [
     name: "Calculadora",
     icon: AppsRoundedIcon,
     component: Calculator,
+    layout: "/admin",
+  },
+  {
+    path: "/weather",
+    name: "Clima Tempo",
+    icon: AcUnitIcon,
+    component: Weather,
     layout: "/admin",
   },
 ];
