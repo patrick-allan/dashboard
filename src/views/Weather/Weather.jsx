@@ -16,8 +16,7 @@ export default function Weather() {
                 lang: 'pt',
                 units: 'metric'
             }
-        });
-        console.log(res.data)
+        });        
         setWeather(res.data)
     };
 

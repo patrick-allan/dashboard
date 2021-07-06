@@ -40,7 +40,7 @@ const dashboardRoutes = [
     component: TableList,
     layout: "/admin",
   },
-  {
+  /* {
     path: "/typography",
     name: "Typography",
     icon: LibraryBooks,
@@ -67,7 +67,7 @@ const dashboardRoutes = [
     icon: Notifications,
     component: NotificationsPage,
     layout: "/admin",
-  },
+  }, */
   {
     path: "/calculator",
     name: "Calculadora",
