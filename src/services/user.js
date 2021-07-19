@@ -13,6 +13,10 @@ const UsersService = {
         localStorage.removeItem('userId', null)
         localStorage.removeItem('UserName', null)
         localStorage.removeItem('expires', null)
+    },
+    register: async (params) => {
+        const response = await Api.post('/register', params)
+        console.log(response)
     }
 }
 

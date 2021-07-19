@@ -8,6 +8,7 @@ import PrivateRoute from "components/Auth/PrivateRoute";
 import Admin from "layouts/Admin.js";
 
 import Login from "views/Login/Login";
+import Register from "views/Register/Register";
 
 import "assets/css/material-dashboard-react.css?v=1.10.0";
 
@@ -16,7 +17,7 @@ ReactDOM.render(
     <Switch>
       <PrivateRoute path="/admin" component={Admin} />
       <Route exact path="/login" component={Login} />
-      <Route exact path="/register" component={Login} />
+      <Route exact path="/register" component={Register} />
       <Redirect from="/" to="/admin/dashboard" />
     </Switch>
   </BrowserRouter>,

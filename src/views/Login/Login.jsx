@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Redirect } from "react-router-dom";
+import { Redirect } from 'react-router-dom';
 import UsersService from '../../services/user'
 import './Login.css';
 import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
@@ -15,8 +15,8 @@ export default function Login() {
     try {
       const user = await UsersService.login({ email: email, password: password });
       setRedirectToDash(true);
-    } catch (error) {
-      setError(true)
+    } catch (error) {      
+      setError(true);
     }
   }
 

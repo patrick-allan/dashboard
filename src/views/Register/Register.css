@@ -1,0 +1,17 @@
+.register{        
+    background: linear-gradient(to right, rgb(83, 105, 118), rgb(41, 46, 73));
+}
+
+.card-login{
+    background-color: white;
+    width: 600px;
+    min-height: 350px;
+}
+
+h5 {
+    margin-bottom: 0px!important;
+}
+
+.mandatory {
+    font-weight: bold;
+}
